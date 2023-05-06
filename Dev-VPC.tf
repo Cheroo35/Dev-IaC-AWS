@@ -8,7 +8,7 @@ resource "aws_vpc" "Development-vpc" {
 }
 
 resource "aws_subnet" "Development-subnet-1" {
-  cidr_block = "10.2.0.0/24"
+  cidr_block = "10.0.1.0/24"
   vpc_id = aws_vpc.Development-vpc.id
   availability_zone = "us-east-1a"
   tags = {

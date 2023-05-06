@@ -12,6 +12,22 @@ resource "aws_subnet" "Development-subnet-1" {
   vpc_id = aws_vpc.Development-vpc.id
   availability_zone = "us-east-1a"
   tags = {
-    name = "Development-envn-subnet-1"
+    Name = "Development-envn-subnet-1"
+  }
+}
+
+resource "aws_subnet" "Development-subnet-2" {
+  vpc_id = aws_vpc.Development-vpc.id
+  cidr_block = "10.0.2.0/24"
+  tags = {
+    Name = "Development-envn-subnet-2"
+  }
+}
+
+resource "aws_subnet" "Development-envn-subnet-3" {
+  vpc_id = aws_vpc.Development-vpc.id
+  cidr_block = "10.0.4.0/24"
+  tags = {
+    Name = "Development-envn-subnet-3"
   }
 }

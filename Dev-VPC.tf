@@ -1,5 +1,5 @@
 resource "aws_vpc" "Development-vpc" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = var.aws_vpc_cidr_block
   enable_dns_hostnames = true
   tags = {
     name = "Development-envn-vpc"
@@ -31,3 +31,4 @@ resource "aws_subnet" "Development-envn-subnet-3" {
     Name = "Development-envn-subnet-3"
   }
 }
+
